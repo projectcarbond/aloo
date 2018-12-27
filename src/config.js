@@ -1,5 +1,5 @@
-const data = 'sample text';
+const SERVER_PORT = 3000;
 
-export default {
-  data
+export {
+  SERVER_PORT
 };
