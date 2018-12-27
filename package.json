@@ -1,0 +1,10 @@
+{
+  "name": "aloo",
+  "version": "0.1.0",
+  "description": "Frontend Starter Kit",
+  "main": "index.js",
+  "repository": "git@github.com:projectcarbond/aloo.git",
+  "author": "faisal@crbnd.com",
+  "license": "MIT",
+  "private": false
+}
