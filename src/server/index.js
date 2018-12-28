@@ -5,7 +5,7 @@ import render from './render';
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../dist')));
+app.use(express.static(path.resolve(__dirname, '../../dist')));
 
 app.get('/*', (req, res) => {
   const content = render(req.url);
