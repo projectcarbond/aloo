@@ -7,7 +7,7 @@ function Layout() {
     <React.Fragment>
       <div>Header</div>
       <Switch>
-        { routes.map(route => <Route key={route.path} {...route}/>) }
+        { routes.map(route => <Route key={route.path} {...route} />) }
       </Switch>
       <div>Footer</div>
     </React.Fragment>

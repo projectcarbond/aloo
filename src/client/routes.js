@@ -4,11 +4,11 @@ import About from './App/About';
 const routes = [{
   path: '/',
   component: Home,
-  exact: true
+  exact: true,
 }, {
   path: '/about',
   component: About,
-  exact: true
+  exact: true,
 }];
 
 export default routes;
