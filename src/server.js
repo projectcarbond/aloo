@@ -2,16 +2,23 @@ import express from 'express';
 import React from 'react';
 import path from 'path';
 import { renderToString } from 'react-dom/server';
+import { StaticRouter, matchPath } from 'react-router-dom';
 import { SERVER_PORT } from './config';
-import App from './client/';
+import Layout from './client/Layout';
+import routes from './client/routes';
+
 
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
 app.get('/*', (req, res) => {
-  const jsx = (<App />);
-  const reactDom = renderToString(jsx);
+  const context = {};
+  const reactDom = renderToString(
+      <StaticRouter location={req.url} context={context}>
+      <Layout />
+    </StaticRouter>
+  );
 
   res.writeHead( 200, { "Content-Type": "text/html" } );
   res.end( htmlTemplate( reactDom ) );
