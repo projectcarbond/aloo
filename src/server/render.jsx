@@ -28,6 +28,7 @@ function render(url) {
     </StaticRouter>
   );
   const reactDom = renderToString(Router);
+
   return htmlTemplate(reactDom);
 }
 
