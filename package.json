@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "git@github.com:projectcarbond/aloo.git",
   "scripts": {
-    "start": "node index.js"
+    "start": "webpack --watch --progress & node index.js"
   },
   "author": "faisal@crbnd.com",
   "license": "MIT",
@@ -14,7 +14,17 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.0.0"
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^2.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "node-sass-glob-importer": "^5.2.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "express": "^4.16.4",

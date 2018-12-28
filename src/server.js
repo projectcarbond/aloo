@@ -1,10 +1,13 @@
 import express from 'express';
 import React from 'react';
+import path from 'path';
 import { renderToString } from 'react-dom/server';
 import { SERVER_PORT } from './config';
 import App from './client/';
 
 const app = express();
+
+app.use(express.static(path.resolve(__dirname, '../dist')));
 
 app.get('/*', (req, res) => {
   const jsx = (<App />);
@@ -21,8 +24,8 @@ function htmlTemplate(reactDom) {
         <head>
             <meta charset="utf-8">
             <title>React SSR</title>
+            <link rel="stylesheet" href="./style.css" />
         </head>
-        
         <body>
             <div id="app">${ reactDom }</div>
             <script src="./app.bundle.js"></script>

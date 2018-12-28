@@ -2,7 +2,7 @@ import React from 'react';
 
 function App() {
   return (
-    <div>Hi!</div>
+    <div>Starter First kit!</div>
   );
 }
 
