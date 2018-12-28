@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Layout from './client/Layout';
+import Layout from './Layout';
 
 const jsx = (
   <Router>

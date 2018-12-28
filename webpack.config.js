@@ -7,7 +7,7 @@ const globImporter = require('node-sass-glob-importer');
 module.exports = {
   mode: 'development',
   entry: {
-    app: './src/client.jsx',
+    app: './src/client/index.jsx',
     css: './src/client/styles/index.scss'
   },
   output: {
