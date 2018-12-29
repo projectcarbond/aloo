@@ -1,9 +1,11 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import { Provider as ReduxProvider } from 'react-redux';
+import createStore, { initializeSession } from '../client/store';
 import Layout from '../client/Layout';
 
-function htmlTemplate(reactDom) {
+function htmlTemplate(reactDom, reduxState) {
   return `
     <!DOCTYPE html>
       <html>
@@ -14,6 +16,9 @@ function htmlTemplate(reactDom) {
         </head>
         <body>
             <div id="app">${reactDom}</div>
+            <script>
+              window.REDUX_DATA = ${JSON.stringify(reduxState)}
+            </script>
             <script src="./app.bundle.js"></script>
         </body>
       </html>
@@ -22,13 +27,20 @@ function htmlTemplate(reactDom) {
 
 function render(url) {
   const context = {};
+  const store = createStore();
+  store.dispatch(initializeSession());
+
   const Router = (
-    <StaticRouter location={url} context={context}>
-      <Layout />
-    </StaticRouter>
+    <ReduxProvider store={store}>
+      <StaticRouter location={url} context={context}>
+        <Layout />
+      </StaticRouter>
+    </ReduxProvider>
   );
+
   const reactDom = renderToString(Router);
-  return htmlTemplate(reactDom);
+  const reduxState = store.getState();
+  return htmlTemplate(reactDom, reduxState);
 }
 
 export default render;
