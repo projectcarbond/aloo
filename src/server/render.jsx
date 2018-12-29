@@ -2,8 +2,9 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { Provider as ReduxProvider } from 'react-redux';
-import createStore, { initializeSession } from '../client/store';
+import createStore from '../client/store';
 import Layout from '../client/Layout';
+import { initializeSession } from '../client/Layout/actions';
 
 function htmlTemplate(reactDom, reduxState) {
   return `
