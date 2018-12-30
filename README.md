@@ -7,7 +7,10 @@
 [![Build Status](https://travis-ci.com/projectcarbond/aloo.svg?branch=master)](https://travis-ci.com/projectcarbond/aloo)
 [![dependencies Status](https://david-dm.org/projectcarbond/aloo/status.svg)](https://david-dm.org/projectcarbond/aloo)
 [![devDependencies Status](https://david-dm.org/projectcarbond/aloo/dev-status.svg)](https://david-dm.org/projectcarbond/aloo?type=dev)
-
+<a href="https://discord.gg/EJjXasw">
+        <img src="https://img.shields.io/discord/308323056592486420.svg?logo=discord"
+            alt="chat on Discord"></a>
+![version](https://img.shields.io/badge/version-0.1.0-blue.svg?maxAge=2592000)
 
 An easy starting point with ReactJS, SASS and Redux with Server Side Rendering.
 
