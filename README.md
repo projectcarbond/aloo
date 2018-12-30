@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/projectcarbond/aloo/raw/master/.github/logo.png" height="120" >
+<img src="https://github.com/projectcarbond/aloo/raw/master/.github/logo.png" height="120">
 </p>
 
 # Aloo - the base to your *torkari* (project).
@@ -21,15 +21,15 @@ An easy starting point with ReactJS, SASS and Redux with Server Side Rendering.
 ```bash
   # Develop
   $ yarn start
-  # Unit Test
 
+  # All Tests
+  $ yarn test
+
+  # Unit Test
   $ yarn unit-test
 
   # Lint
   $ yarn lint
-
-  # All Tests
-  $ yarn test
 ```
 
 ## Things left to do
