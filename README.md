@@ -5,6 +5,9 @@
 # Aloo - the base to your *torkari* (project).
 
 [![Build Status](https://travis-ci.com/projectcarbond/aloo.svg?branch=master)](https://travis-ci.com/projectcarbond/aloo)
+[![dependencies Status](https://david-dm.org/projectcarbond/aloo/status.svg)](https://david-dm.org/projectcarbond/aloo)
+[![devDependencies Status](https://david-dm.org/projectcarbond/aloo/dev-status.svg)](https://david-dm.org/projectcarbond/aloo?type=dev)
+
 
 An easy starting point with ReactJS, SASS and Redux with Server Side Rendering.
 
