@@ -14,6 +14,16 @@
 
 An easy starting point with ReactJS, SASS and Redux with Server Side Rendering.
 
+## Why use aloo?
+
+Does not come with a lot of pre-config, almost everything is seperately handled such that you can modify based your needs while using the popular dev standards:
+- ES2017 Support for both Frontend and Backend
+- ExpressJS static server (can also be configured to be an API server!)
+- ReactJS + Redux (with server side rendering to [optimize load speed](https://hackernoon.com/server-side-vs-client-side-rendering-in-react-apps-443efd6f2e87)) 
+- SASS for styling (with glob importing)
+- Jest + Enzyme + Eslint for extensive testing
+- Travis CI/CD Support (however easily portable to your choice of CI/CD)
+
 ## Installation
 
 ```bash
@@ -40,11 +50,11 @@ An easy starting point with ReactJS, SASS and Redux with Server Side Rendering.
 
 ## Things left to do
 
-- Production environment
+- Build & Production environment
 - Documentation
 - More extensive README
-- Docker
-- Adding CLI for multiple starter kits
+- Dockerize!
+- Create Starter kits for other languages (preferably Django/Flask/Golang)
 
 ## License
 
