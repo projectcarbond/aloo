@@ -36,24 +36,25 @@ Does not come with a lot of pre-config, almost everything is seperately handled 
 
 ```bash
   # Develop
-  $ yarn start
+  $ docker-compose up
 
   # All Tests
-  $ yarn test
+  $ docker-compose exec server yarn test
 
   # Unit Test
-  $ yarn unit-test
+  $ docker-compose exec server yarn unit-test
 
   # Lint
-  $ yarn lint
+  $ docker-compose exec server yarn lint
+
+  # Run in Production
+  $ docker-compose run server yarn prod-start -d
 ```
 
 ## Things left to do
 
-- Build & Production environment
 - Documentation
 - More extensive README
-- Dockerize!
 - Create Starter kits for other languages (preferably Django/Flask/Golang)
 
 ## License
