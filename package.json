@@ -5,10 +5,12 @@
   "main": "index.js",
   "repository": "git@github.com:projectcarbond/aloo.git",
   "scripts": {
-    "start": "webpack --watch --progress & node index.js",
+    "start": "webpack --watch --progress --config webpack.dev.js & node index.js",
     "lint": "eslint --ext .js --ext .jsx ./src/**",
     "unit-test": "jest",
-    "test": "yarn unit-test & yarn lint"
+    "test": "yarn unit-test & yarn lint",
+    "build": "webpack --config webpack.prod.js",
+    "prod-start": "NODE_ENV=production node index.js"
   },
   "author": "faisal@crbnd.com",
   "license": "MIT",
@@ -38,7 +40,8 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "express": "^4.16.4",
