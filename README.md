@@ -51,6 +51,49 @@ Does not come with a lot of pre-config, almost everything is seperately handled 
   $ docker-compose run server yarn prod-start -d
 ```
 
+## Folder Structure
+
+```
+├── dist # Generated Static Folder
+│   ├── app.bundle.js
+│   ├── css.bundle.js
+│   └── style.css
+├── docker-compose.yml # Docker Compose file to manage services
+├── Dockerfile # Dockerfile for Node Service
+├── enzyme.config.js # Enzyme testing config
+├── index.js # Starting point of entire app
+├── jest.config.js # Jest environment config
+├── node_modules
+├── package.json
+├── process.json # PM2 config
+├── README.md
+├── src # Entire app under here
+│   ├── client # Contains all client side code
+│   │   ├── App # All views go under here
+│   │   │   ├── About
+│   │   │   │   └── index.jsx
+│   │   │   └── Home
+│   │   │       ├── Home.test.jsx
+│   │   │       └── index.jsx
+│   │   ├── index.jsx # Main entry point of ReactJS
+│   │   ├── Layout # Initial entry that contains layout of entire app
+│   │   │   ├── actions.js
+│   │   │   ├── index.jsx
+│   │   │   └── store.js
+│   │   ├── routes.js # All App routes
+│   │   ├── store.js # Contains App wide Redux Store
+│   │   └── styles # Contains all styles that would be compiled to style.css
+│   │       └── index.scss
+│   ├── config.js # Contains app wide config
+│   └── server # Contains all server side code
+│       ├── index.js
+│       └── render.jsx
+├── webpack.common.js
+├── webpack.dev.js # Webpack Development Config
+├── webpack.prod.js # Webpack Production Build Config
+└── yarn.lock
+```
+
 ## Things left to do
 
 - Documentation
