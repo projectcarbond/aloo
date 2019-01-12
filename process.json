@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "aloo",
+      "script": "index.js",
+      "env_development": {
+	"instances": 1,
+	"exec_mode": "cluster",
+        "PORT" : 3000,
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+	"instances": 4,
+	"exec_mode": "cluster",
+        "PORT": 4444,
+        "NODE_ENV": "production"
+      },
+    }
+  ]
+}
