@@ -27,7 +27,7 @@ Does not come with a lot of pre-config, almost everything is seperately handled 
 ## Installation
 
 ```bash
-  $ git clone https://github.com/projectcarbond/aloo.git [your_project_name]
+  $ git clone https://github.com/projectcarbond/aloo.git [your_project_name] --depth=1
   $ cd [your_project_name]
   $ yarn install
 ```
